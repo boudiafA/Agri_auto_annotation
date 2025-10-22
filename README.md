@@ -1,4 +1,3 @@
-```markdown
 # GranD Pipeline - Conda Environment Setup Guide
 
 This guide provides detailed instructions for creating conda environments for each model in the GranD automated annotation pipeline.
@@ -32,7 +31,7 @@ The GranD pipeline requires 10 different conda environments due to varying depen
 
 ### 1. Environment: `grand_env_2` (MiDaS Depth Maps)
 
-**Purpose:** Depth estimation using MiDaS model.
+**Purpose:** Depth estimation using MiDaS model
 
 **Step 1: Create environment file**
 Create a file named `grand_env_2_midas.yml`:
@@ -93,14 +92,15 @@ python -m torch.distributed.launch \
 
 ### 2. Environment: `grand_env_1` (Landmark Detection, Co-DETR, OWL-ViT)
 
-**Purpose:** Landmark categorization using LLaVA, object detection using Co-DETR, and open vocabulary detection using OWL-ViT.
+**Purpose:** Landmark categorization using LLaVA, object detection using Co-DETR, open vocabulary detection using OWL-ViT
 
 **Step 1: Create environment from provided file**
 ```bash
 # Use the provided grand_env_1.yml file from the environments directory
 conda env create -f environments/grand_env_1.yml
 ```
-**Note:** The `grand_env_1.yml` file contains extensive dependencies. If some pip packages fail to install, you may need to install them manually after activating the environment.
+
+**Note:** The grand_env_1.yml file contains extensive dependencies. If some pip packages fail to install, you may need to install them separately.
 
 **Step 2: Activate environment**
 ```bash
@@ -119,8 +119,9 @@ cd ..
 
 For Co-DETR:
 ```bash
-# Download from Google Drive: https://drive.google.com/drive/folders/1asWoZ3SuM6APTL9D-QUF_YW9mjULNdh9?usp=sharing
-# Place co_deformable_detr_swin_large_900q_3x_coco.pth in the 'checkpoints' directory.
+# Download from Google Drive link:
+# https://drive.google.com/drive/folders/1asWoZ3SuM6APTL9D-QUF_YW9mjULNdh9?usp=sharing
+# Place co_deformable_detr_swin_large_900q_3x_coco.pth in checkpoints directory
 ```
 
 **Usage for Landmark Detection:**
@@ -147,7 +148,7 @@ python launch_codetr_multi_gpu_inference.py \
 
 ### 3. Environment: `grand_env_3` (Image Tagging, GRIT, BLIP-2)
 
-**Purpose:** Image tagging using Tag2Text & RAM, attribute detection using GRIT, and captioning using BLIP-2.
+**Purpose:** Image tagging using Tag2Text & RAM, attribute detection using GRIT, captioning using BLIP-2
 
 **Step 1: Create environment from provided file**
 ```bash
@@ -164,8 +165,11 @@ conda activate grand_env_3
 For Image Tagging:
 ```bash
 cd checkpoints
-# Download tag2text_swin_14m.pth from: https://huggingface.co/spaces/xinyu1205/recognize-anything/blob/main/tag2text_swin_14m.pth
-# Download ram_swin_large_14m.pth from: https://huggingface.co/spaces/xinyu1205/recognize-anything/blob/main/ram_swin_large_14m.pth
+# Download tag2text_swin_14m.pth from:
+# https://huggingface.co/spaces/xinyu1205/recognize-anything/blob/main/tag2text_swin_14m.pth
+
+# Download ram_swin_large_14m.pth from:
+# https://huggingface.co/spaces/xinyu1205/recognize-anything/blob/main/ram_swin_large_14m.pth
 cd ..
 ```
 
@@ -220,7 +224,7 @@ python -m torch.distributed.launch \
 
 ### 4. Environment: `grand_env_4` (EVA-02, POMP, EVA-CLIP)
 
-**Purpose:** Object detection using EVA-02, open vocabulary detection using POMP, and label assignment using EVA-CLIP.
+**Purpose:** Object detection using EVA-02, open vocabulary detection using POMP, label assignment using EVA-CLIP
 
 **Step 1: Create environment from provided file**
 ```bash
@@ -230,7 +234,7 @@ conda env create -f environments/grand_env_4.yml
 **Step 2: Activate and setup EVA-02**
 ```bash
 conda activate grand_env_4
-# Follow the setup instructions at: https://github.com/baaivision/EVA/tree/master/EVA-02/det#setup
+# Follow instructions at: https://github.com/baaivision/EVA/tree/master/EVA-02/det#setup
 ```
 
 **Step 3: Download model checkpoints**
@@ -238,17 +242,21 @@ conda activate grand_env_4
 For EVA-02:
 ```bash
 cd checkpoints
-# Download eva02_L_lvis_sys.pth from: https://huggingface.co/Yuxin-CV/EVA-02/blob/main/eva02/det/eva02_L_lvis_sys.pth
-# Download eva02_L_lvis_sys_o365.pth from: https://huggingface.co/Yuxin-CV/EVA-02/blob/main/eva02/det/eva02_L_lvis_sys_o365.pth
+# Download eva02_L_lvis_sys.pth from:
+# https://huggingface.co/Yuxin-CV/EVA-02/blob/main/eva02/det/eva02_L_lvis_sys.pth
+
+# Download eva02_L_lvis_sys_o365.pth from:
+# https://huggingface.co/Yuxin-CV/EVA-02/blob/main/eva02/det/eva02_L_lvis_sys_o365.pth
 cd ..
 ```
 
 For POMP:
 ```bash
 cd checkpoints
-# Download Detic_LI_CLIP_R5021k_640b64_4x_ft4x_max-size_pomp.pth from Google Drive links:
+# Download from Google Drive:
 # https://drive.google.com/file/d/1C8oU6cWkJdU3Q3IHaqTcbIToRLo9bMnu/view?usp=sharing
 # https://drive.google.com/file/d/1TwrjcUYimkI_f9z9UZXCmLztdgv31Peu/view?usp=sharing
+# Place Detic_LI_CLIP_R5021k_640b64_4x_ft4x_max-size_pomp.pth in checkpoints directory
 cd ..
 ```
 
@@ -279,16 +287,16 @@ python launch_pomp_multi_gpu_inference.py \
 
 ### 5. Environment: `grand_env_5` (OV-SAM)
 
-**Purpose:** Open vocabulary classification using OV-SAM.
+**Purpose:** Open vocabulary classification using OV-SAM
 
 **Step 1: Setup environment**
 ```bash
-# Follow the detailed installation instructions at the official OV-SAM repository:
+# Follow installation instructions at:
 # https://github.com/HarborYuan/ovsam?tab=readme-ov-file#%EF%B8%8F-installation
 
 conda create -n grand_env_5 python=3.10
 conda activate grand_env_5
-# Install all required dependencies as per the OV-SAM documentation.
+# Install required dependencies as per OV-SAM documentation
 ```
 
 **Step 2: Download model checkpoint**
@@ -315,9 +323,9 @@ python launch_ov_sam_multi_gpu_inference.py \
 
 ### 6. Environment: `grand_env_3` (BLIP-2 Captioning) - Already Created
 
-**Purpose:** Image captioning using BLIP-2.
+**Purpose:** Image captioning using BLIP-2
 
-**Setup:** This environment was already created in Level 1 (step 3).
+**Setup:** Environment already created in Level 1 (step 3)
 
 **Usage:**
 ```bash
@@ -330,13 +338,14 @@ python -m torch.distributed.launch \
     --image_dir_path /path/to/images \
     --output_dir_path /path/to/output
 ```
-**Note:** Checkpoints are automatically downloaded by the model from Hugging Face Hub.
+
+**Note:** Checkpoints are automatically downloaded by the model.
 
 ---
 
 ### 7. Environment: `grand_env_6` (LLaVA Captioning)
 
-**Purpose:** Image captioning using LLaVA.
+**Purpose:** Image captioning using LLaVA
 
 **Step 1: Create environment from provided file**
 ```bash
@@ -348,8 +357,7 @@ conda env create -f environments/grand_env_6.yml
 conda activate grand_env_6
 ```
 
-**Step 3: Use LLaVA checkpoint**
-The required checkpoint should have been downloaded in the setup for `grand_env_1`.
+**Step 3: Use LLaVA checkpoint** (already downloaded in step 2 of grand_env_1)
 
 **Usage:**
 ```bash
@@ -365,7 +373,7 @@ python infer.py \
 
 ### 8. Environment: `grand_env_7` (MDETR)
 
-**Purpose:** Phrase grounding using MDETR.
+**Purpose:** Phrase grounding using MDETR
 
 **Step 1: Create environment from provided file**
 ```bash
@@ -375,7 +383,7 @@ conda env create -f environments/grand_env_7.yml
 **Step 2: Activate and setup MDETR**
 ```bash
 conda activate grand_env_7
-# Follow any additional installation instructions specific to the MDETR model if required.
+# Follow MDETR installation instructions
 ```
 
 **Usage:**
@@ -396,7 +404,7 @@ python -m torch.distributed.launch \
 
 ### 9. Environment: `grand_env_8` (GPT4RoI)
 
-**Purpose:** Attribute enrichment using GPT4RoI.
+**Purpose:** Attribute enrichment using GPT4RoI
 
 **Step 1: Setup GPT4RoI environment**
 ```bash
@@ -404,13 +412,13 @@ cd level_2_inference/4_gpt4roi
 git clone https://github.com/jshilong/GPT4RoI.git
 cd GPT4RoI
 
-# Follow the installation instructions at:
+# Follow installation instructions at:
 # https://github.com/jshilong/GPT4RoI?tab=readme-ov-file#install
 ```
 
 **Step 2: Download GPT4RoI weights**
 ```bash
-# Follow the instructions to download model weights at:
+# Follow instructions at:
 # https://github.com/jshilong/GPT4RoI?tab=readme-ov-file#weights
 ```
 
@@ -441,7 +449,7 @@ python -m torch.distributed.launch \
 
 ### 10. Environment: `grand_env_9` (Dense Captions)
 
-**Purpose:** Generate level-3 dense captions.
+**Purpose:** Generate level-3 dense captions
 
 **Step 1: Create environment from provided file**
 ```bash
@@ -468,7 +476,7 @@ python run.py \
 
 ### 11. Environment: `grand_env_utils` (Utility Scripts)
 
-**Purpose:** Scene graph generation and processing utilities.
+**Purpose:** Scene graph generation and processing utilities
 
 **Step 1: Create environment file**
 Create a file named `grand_env_utils.yml`:
@@ -532,24 +540,23 @@ python utils/prepare_level_1.py \
 
 ## Quick Setup: Create All Environments at Once
 
-You can create all environments sequentially by running the following commands from your project's root directory.
+You can create all environments sequentially using these commands:
 
 ```bash
-# Create environments from .yml files
-conda env create -f environments/grand_env_1.yml
-conda env create -f environments/grand_env_2.yml
-conda env create -f environments/grand_env_3.yml
-conda env create -f environments/grand_env_4.yml
-conda env create -f environments/grand_env_6.yml
-conda env create -f environments/grand_env_7.yml
-conda env create -f environments/grand_env_9.yml
-conda env create -f environments/grand_env_utils.yml
+# Navigate to the environments directory
+cd environments
 
-# Reminder for manual setup environments:
-echo "--------------------------------------------------------------------------"
-echo "ATTENTION: Manual setup is required for 'grand_env_5' and 'grand_env_8'."
-echo "Please follow the instructions in the README for OV-SAM and GPT4RoI."
-echo "--------------------------------------------------------------------------"
+# Create all environments
+conda env create -f grand_env_1.yml
+conda env create -f grand_env_2.yml
+conda env create -f grand_env_3.yml
+conda env create -f grand_env_4.yml
+# For grand_env_5, follow OV-SAM installation guide
+conda env create -f grand_env_6.yml
+conda env create -f grand_env_7.yml
+# For grand_env_8, follow GPT4RoI installation guide
+conda env create -f grand_env_9.yml
+conda env create -f grand_env_utils.yml
 ```
 
 ---
@@ -558,32 +565,33 @@ echo "--------------------------------------------------------------------------
 
 ### Common Issues
 
-1.  **`pip` dependencies fail during conda environment creation:**
-    -   Remove the failing packages from the `.yml` file.
-    -   Create the environment with the remaining packages.
-    -   Activate the new environment and install the failed packages manually using `pip install <package-name>`.
+1. **pip dependencies fail during conda environment creation:**
+   - Remove the failing packages from the .yml file
+   - Create the environment without them
+   - Activate the environment and install them manually using pip
 
-2.  **CUDA compatibility issues:**
-    -   Ensure your installed NVIDIA driver version is compatible with the `cudatoolkit` specified in the environment file.
-    -   If necessary, modify the `cudatoolkit` version in the `.yml` files to match a version compatible with your system's drivers.
+2. **CUDA compatibility issues:**
+   - Ensure your CUDA version matches the cudatoolkit specified in the environment
+   - Update CUDA drivers if necessary
+   - Modify cudatoolkit version in .yml files to match your system
 
-3.  **Memory issues during model inference:**
-    -   Reduce the batch size in the inference script.
-    -   Use fewer GPUs if running in a multi-GPU setup.
-    -   Ensure no other processes are consuming significant GPU memory.
+3. **Memory issues during model inference:**
+   - Reduce batch size
+   - Use fewer GPUs
+   - Process images in smaller batches
 
-4.  **Missing model checkpoints:**
-    -   Verify that all checkpoint downloads completed successfully and that file sizes are correct.
-    -   Check that the file paths provided in the inference commands are correct.
-    -   Ensure you have sufficient disk space for the checkpoints and output files.
+4. **Missing model checkpoints:**
+   - Verify all checkpoint downloads are complete
+   - Check file permissions
+   - Ensure sufficient disk space
 
 ### Verification Commands
 
-After creating each environment, you can run a quick check to verify the installation:
+After creating each environment, verify it works:
 
 ```bash
 conda activate <env_name>
-python -c "import torch; print(f'PyTorch version: {torch.__version__}'); print(f'CUDA available: {torch.cuda.is_available()}')"
+python -c "import torch; print(torch.__version__); print(torch.cuda.is_available())"
 conda deactivate
 ```
 
@@ -591,39 +599,38 @@ conda deactivate
 
 ## Environment Summary Table
 
-| Environment         | Purpose                  | Models                               | Python | PyTorch |
-| ------------------- | ------------------------ | ------------------------------------ | ------ | ------- |
-| `grand_env_1`       | Landmark, Co-DETR, OWL-ViT | LLaVA, Co-DETR, OWL-ViT              | 3.10   | 1.13+   |
-| `grand_env_2`       | Depth Estimation         | MiDaS                                | 3.10.8 | 1.13.0  |
-| `grand_env_3`       | Tagging, GRIT, BLIP-2    | Tag2Text, RAM, GRIT, BLIP-2          | 3.10   | Varies  |
-| `grand_env_4`       | EVA-02, POMP, EVA-CLIP   | EVA-02, POMP                         | 3.10   | Varies  |
-| `grand_env_5`       | OV-SAM                   | OV-SAM                               | 3.10   | Varies  |
-| `grand_env_6`       | LLaVA Caption            | LLaVA                                | 3.10   | Varies  |
-| `grand_env_7`       | MDETR Grounding          | MDETR                                | 3.10   | Varies  |
-| `grand_env_8`       | Attribute Enrichment     | GPT4RoI                              | 3.10   | Varies  |
-| `grand_env_9`       | Dense Captions           | Custom                               | 3.10   | Varies  |
-| `grand_env_utils`   | Utilities                | Various (for post-processing)        | 3.11.8 | 2.2.1   |
+| Environment | Purpose | Models | Python | PyTorch |
+|-------------|---------|--------|--------|---------|
+| grand_env_1 | Landmark, Co-DETR, OWL-ViT | LLaVA, Co-DETR, OWL-ViT | 3.10 | 1.13+ |
+| grand_env_2 | Depth Estimation | MiDaS | 3.10.8 | 1.13.0 |
+| grand_env_3 | Tagging, GRIT, BLIP-2 | Tag2Text, RAM, GRIT, BLIP-2 | 3.10 | varies |
+| grand_env_4 | EVA-02, POMP, EVA-CLIP | EVA-02, POMP | 3.10 | varies |
+| grand_env_5 | OV-SAM | OV-SAM | 3.10 | varies |
+| grand_env_6 | LLaVA Caption | LLaVA | 3.10 | varies |
+| grand_env_7 | MDETR Grounding | MDETR | 3.10 | varies |
+| grand_env_8 | Attribute Enrichment | GPT4RoI | 3.10 | varies |
+| grand_env_9 | Dense Captions | Custom | 3.10 | varies |
+| grand_env_utils | Utilities | Various | 3.11.8 | 2.2.1 |
 
 ---
 
 ## Additional Notes
 
-1.  **Environment Isolation:** Each environment is fully isolated to prevent dependency conflicts between the different models.
-2.  **GPU Requirements:** Most models require a CUDA-capable GPU for inference. CPU-only inference may be possible for some models but will be extremely slow.
-3.  **Disk Space:** Ensure adequate disk space is available for all environments, model checkpoints (~50GB+), and generated annotations.
-4.  **Checkpoint Management:** It is recommended to keep all downloaded checkpoints in a single, centralized `checkpoints` directory for easier management.
-5.  **Multi-GPU Support:** Most inference scripts are designed to support multi-GPU processing to accelerate the annotation pipeline.
+1. **Environment Isolation:** Each environment is isolated to prevent dependency conflicts
+2. **GPU Requirements:** Most models require CUDA-capable GPUs
+3. **Disk Space:** Ensure adequate disk space for all checkpoints (~50GB+)
+4. **Checkpoint Management:** Keep all checkpoints in a centralized directory
+5. **Multi-GPU Support:** Most models support distributed training/inference
 
 ---
 
 ## Next Steps
 
-After successfully setting up all environments:
+After setting up all environments:
 
-1.  Download all required model checkpoints into your designated `checkpoints` directory.
-2.  Verify each environment by running a test inference on a single image.
-3.  Configure the main `run_pipeline.sh` script with the correct paths for your system.
-4.  Run the complete pipeline or individual components as needed.
+1. Download all required model checkpoints
+2. Verify each environment by running test inference
+3. Configure the `run_pipeline.sh` script with your paths
+4. Run the complete pipeline or individual components
 
-For detailed usage of each model, please refer to the README files located in their respective directories within the project.
-```
+For detailed usage of each model, refer to the README files in their respective directories.
