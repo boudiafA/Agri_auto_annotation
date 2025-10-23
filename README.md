@@ -15,6 +15,8 @@ The GranD pipeline requires 10 different conda environments due to varying depen
 - `grand_env_8` - for GPT4RoI
 - `grand_env_9` - for Level 3 Dense Captions
 - `grand_env_utils` - for utility scripts and scene graph generation
+- `fastvlm` - for Llama 3.1
+- `sam` - for SAM mdoel
 
 ---
 
