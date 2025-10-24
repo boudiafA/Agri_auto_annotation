@@ -10,7 +10,7 @@ Before installing the environments, you need to download the main project code, 
 
 1.  **Main Code and Weights**
     The main folder containing all the code and model weights can be downloaded from:
-    - **Link:** [LinkPlaceHolder]
+    - **Link:** [https://drive.google.com/file/d/1aRJ00qMRYF6aqdePuAve_lO_3H0FtYBn/view?usp=sharing]
 
 2.  **Dataset**
     Download the required dataset from the following link:
