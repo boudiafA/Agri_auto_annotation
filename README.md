@@ -23,8 +23,7 @@ This step covers getting the code, dataset, model checkpoints, and environment f
 
 2.  **Download the Model Checkpoints**
     The model weights and checkpoints are required for running the pipeline. Download and unzip them.
-    - **Link:** [https://drive.google.com/file/d/1aRJ00qMRYF6aqdePuAve_lO_3H0FtYBn/view?usp=sharing](https://drive.google.com/file/d/1aRJ00qMRYF6aqdePuAve_lO_3H0FtYBn/view?usp=sharing)
-
+    - **Link:** [https://drive.google.com/file/d/12sgu6c9ZzBjwwhMjPEUniM_ASj4XlIzB/view?usp=sharing](https://drive.google.com/file/d/12sgu6c9ZzBjwwhMjPEUniM_ASj4XlIzB/view?usp=sharing)
 3.  **Download the Dataset**
     Download and unzip the project dataset.
     - **Link:** [https://drive.google.com/file/d/1GQz7HQw6Mvlqw4GoRRxy-MwFxrDejp4d/view?usp=sharing](https://drive.google.com/file/d/1GQz7HQw6Mvlqw4GoRRxy-MwFxrDejp4d/view?usp=sharing)
