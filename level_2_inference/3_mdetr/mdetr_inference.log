@@ -1,0 +1,1909 @@
+2025-05-13 01:57:02,536 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-05-13 01:57:02,536 - INFO - Created dataset with 2 images
+2025-05-13 01:57:02,537 - INFO - Created dataloader with batch size 1
+2025-05-13 01:57:04,633 - INFO - Successfully loaded model architecture
+2025-05-13 01:57:04,634 - INFO - Using cached checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-05-13 01:57:08,175 - INFO - Checkpoint loaded successfully
+2025-05-13 01:57:10,430 - ERROR - RuntimeError processing image: 2007_001595.jpg. Error: Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the same or input should be a MKLDNN tensor and weight is a dense tensor
+2025-05-13 01:57:10,438 - ERROR - Traceback (most recent call last):
+  File "infer2.py", line 187, in run
+    _, all_nouns, all_phrase_boxes = run_inference(model, image, image_size, nouns, phrases)
+  File "infer2.py", line 80, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the same or input should be a MKLDNN tensor and weight is a dense tensor
+
+2025-05-13 01:57:10,461 - ERROR - RuntimeError processing image: 2007_000129.jpg. Error: Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the same or input should be a MKLDNN tensor and weight is a dense tensor
+2025-05-13 01:57:10,461 - ERROR - Traceback (most recent call last):
+  File "infer2.py", line 187, in run
+    _, all_nouns, all_phrase_boxes = run_inference(model, image, image_size, nouns, phrases)
+  File "infer2.py", line 80, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the same or input should be a MKLDNN tensor and weight is a dense tensor
+
+2025-05-13 01:57:10,513 - INFO - Inference completed
+2025-05-13 02:02:31,739 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-05-13 02:02:31,739 - INFO - Created dataset with 2 images
+2025-05-13 02:02:31,740 - INFO - Created dataloader with batch size 1
+2025-05-13 02:02:34,025 - INFO - Successfully loaded model architecture
+2025-05-13 02:02:34,025 - INFO - Using cached checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-05-13 02:02:37,562 - INFO - Checkpoint loaded successfully
+2025-05-13 02:02:41,887 - INFO - Inference completed
+2025-05-13 02:08:16,437 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-05-13 02:08:16,438 - INFO - Created dataset with 2 images
+2025-05-13 02:08:16,439 - INFO - Created dataloader with batch size 1
+2025-05-13 02:08:19,362 - INFO - Successfully loaded model architecture
+2025-05-13 02:08:19,362 - INFO - Using cached checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-05-13 02:08:22,293 - INFO - Checkpoint loaded successfully
+2025-05-13 02:08:24,613 - INFO - Inference completed
+2025-05-13 02:20:20,935 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-05-13 02:20:20,938 - INFO - Created dataset with 2 images
+2025-05-13 02:20:20,939 - INFO - Created dataloader with batch size 1
+2025-05-13 02:20:23,031 - INFO - Successfully loaded model architecture
+2025-05-13 02:20:23,031 - INFO - Using cached checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-05-13 02:20:25,428 - INFO - Checkpoint loaded successfully
+2025-05-13 02:20:27,798 - INFO - Inference completed
+2025-05-13 02:50:51,904 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-05-13 02:50:51,905 - INFO - Created dataset with 2 images
+2025-05-13 02:50:51,905 - INFO - Created dataloader with batch size 1
+2025-05-13 02:50:54,435 - INFO - Successfully loaded model architecture
+2025-05-13 02:50:54,435 - INFO - Using cached checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-05-13 02:50:57,218 - INFO - Checkpoint loaded successfully
+2025-05-13 02:50:59,465 - INFO - Inference completed
+2025-05-13 05:41:52,230 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-05-13 05:41:52,232 - INFO - Created dataset with 2 images
+2025-05-13 05:41:52,233 - INFO - Created dataloader with batch size 1
+2025-05-13 05:41:54,754 - INFO - Successfully loaded model architecture
+2025-05-13 05:41:54,754 - INFO - Using cached checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-05-13 05:41:57,484 - INFO - Checkpoint loaded successfully
+2025-05-13 05:42:00,052 - INFO - Inference completed
+2025-05-13 18:24:12,162 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-05-13 18:24:12,164 - INFO - Created dataset with 2 images
+2025-05-13 18:24:12,164 - INFO - Created dataloader with batch size 1
+2025-05-13 18:24:14,502 - INFO - Successfully loaded model architecture
+2025-05-13 18:24:14,503 - INFO - Using cached checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-05-13 18:24:18,004 - INFO - Checkpoint loaded successfully
+2025-05-13 18:24:21,644 - INFO - Inference completed
+2025-05-13 18:33:23,394 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-05-13 18:33:23,396 - INFO - Created dataset with 2 images
+2025-05-13 18:33:23,396 - INFO - Created dataloader with batch size 1
+2025-05-13 18:33:25,532 - INFO - Successfully loaded model architecture
+2025-05-13 18:33:25,532 - INFO - Using cached checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-05-13 18:33:28,414 - INFO - Checkpoint loaded successfully
+2025-05-13 18:33:30,812 - INFO - Inference completed
+2025-05-13 18:55:47,469 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-05-13 18:55:47,471 - INFO - Created dataset with 2 images
+2025-05-13 18:55:47,472 - INFO - Created dataloader with batch size 1
+2025-05-13 18:55:49,513 - INFO - Successfully loaded model architecture
+2025-05-13 18:55:49,513 - INFO - Using cached checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-05-13 18:55:52,121 - INFO - Checkpoint loaded successfully
+2025-05-13 18:55:54,721 - INFO - Inference completed
+2025-05-13 20:07:53,434 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-05-13 20:07:53,435 - INFO - Created dataset with 5 images
+2025-05-13 20:07:53,435 - INFO - Created dataloader with batch size 1
+2025-05-13 20:07:55,446 - INFO - Successfully loaded model architecture
+2025-05-13 20:07:55,446 - INFO - Using cached checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-05-13 20:07:57,800 - INFO - Checkpoint loaded successfully
+2025-05-13 20:08:01,647 - INFO - Inference completed
+2025-05-13 20:22:15,211 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-05-13 20:22:15,212 - INFO - Created dataset with 5 images
+2025-05-13 20:22:15,213 - INFO - Created dataloader with batch size 1
+2025-05-13 20:22:17,404 - INFO - Successfully loaded model architecture
+2025-05-13 20:22:17,404 - INFO - Using cached checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-05-13 20:22:20,814 - INFO - Checkpoint loaded successfully
+2025-05-13 20:46:24,784 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-05-13 20:46:24,786 - INFO - Created dataset with 5 images
+2025-05-13 20:46:24,786 - INFO - Created dataloader with batch size 1
+2025-05-13 20:46:27,052 - INFO - Successfully loaded model architecture
+2025-05-13 20:46:27,052 - INFO - Using cached checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-05-13 20:46:30,750 - INFO - Checkpoint loaded successfully
+2025-05-13 20:56:08,943 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-05-13 20:56:08,943 - INFO - Created dataset with 5 images
+2025-05-13 20:56:08,944 - INFO - Created dataloader with batch size 1
+2025-05-13 20:56:11,068 - INFO - Successfully loaded model architecture
+2025-05-13 20:56:11,068 - INFO - Using cached checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-05-13 20:56:13,865 - INFO - Checkpoint loaded successfully
+2025-05-13 20:56:18,810 - INFO - Inference completed
+2025-05-13 21:20:15,821 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-05-13 21:20:15,822 - INFO - Created dataset with 5 images
+2025-05-13 21:20:15,822 - INFO - Created dataloader with batch size 1
+2025-05-13 21:20:18,342 - INFO - Successfully loaded model architecture
+2025-05-13 21:20:18,342 - INFO - Using cached checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-05-13 21:20:20,952 - INFO - Checkpoint loaded successfully
+2025-05-13 21:20:23,426 - INFO - Inference completed
+2025-10-02 07:37:05,514 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-02 07:37:05,522 - INFO - Created dataset with 180 images
+2025-10-02 07:37:05,523 - INFO - Created dataloader with batch size 1
+2025-10-02 07:37:07,812 - INFO - Successfully loaded model architecture
+2025-10-02 07:37:07,815 - INFO - Downloading checkpoint from https://zenodo.org/record/4721981/files/refcocog_EB3_checkpoint.pth?download=1 to /mnt/e/Desktop/AgML/AgriDataset_GranD_annotation/detection/CBDA/refcocog_EB3_checkpoint.pth
+2025-10-02 07:44:02,362 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-02 07:44:02,371 - INFO - Created dataset with 180 images
+2025-10-02 07:44:02,371 - INFO - Created dataloader with batch size 1
+2025-10-02 07:44:03,767 - INFO - Successfully loaded model architecture
+2025-10-02 07:44:03,767 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-02 07:44:06,117 - INFO - Checkpoint loaded successfully
+2025-10-02 07:44:11,643 - INFO - Inference completed
+2025-10-02 07:58:40,260 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-02 07:58:40,269 - INFO - Created dataset with 180 images
+2025-10-02 07:58:40,269 - INFO - Created dataloader with batch size 1
+2025-10-02 07:58:41,670 - INFO - Successfully loaded model architecture
+2025-10-02 07:58:41,670 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-02 07:58:43,931 - INFO - Checkpoint loaded successfully
+2025-10-02 07:58:48,705 - INFO - Inference completed
+2025-10-02 10:30:02,419 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-02 10:30:02,433 - INFO - Created dataset with 5369 images
+2025-10-02 10:30:02,433 - INFO - Created dataloader with batch size 1
+2025-10-02 10:30:04,309 - INFO - Successfully loaded model architecture
+2025-10-02 10:30:04,309 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-02 10:30:06,614 - INFO - Checkpoint loaded successfully
+2025-10-02 10:30:59,079 - INFO - Inference completed
+2025-10-02 20:25:46,311 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-02 20:25:46,320 - INFO - Created dataset with 180 images
+2025-10-02 20:25:46,321 - INFO - Created dataloader with batch size 1
+2025-10-02 20:25:48,172 - INFO - Successfully loaded model architecture
+2025-10-02 20:25:48,172 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-02 20:25:50,346 - INFO - Checkpoint loaded successfully
+2025-10-02 20:25:56,551 - INFO - Inference completed
+2025-10-02 20:56:51,030 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-02 20:56:51,039 - INFO - Created dataset with 180 images
+2025-10-02 20:56:51,040 - INFO - Created dataloader with batch size 1
+2025-10-02 20:56:53,506 - INFO - Successfully loaded model architecture
+2025-10-02 20:56:53,506 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-02 20:56:56,999 - INFO - Checkpoint loaded successfully
+2025-10-02 20:57:02,446 - INFO - Inference completed
+2025-10-02 20:58:44,497 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-02 20:58:44,512 - INFO - Created dataset with 5369 images
+2025-10-02 20:58:44,512 - INFO - Created dataloader with batch size 1
+2025-10-02 20:58:45,871 - INFO - Successfully loaded model architecture
+2025-10-02 20:58:45,871 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-02 20:58:47,478 - INFO - Checkpoint loaded successfully
+2025-10-02 20:59:52,547 - INFO - Inference completed
+2025-10-02 22:12:51,550 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-02 22:12:51,559 - INFO - Created dataset with 180 images
+2025-10-02 22:12:51,559 - INFO - Created dataloader with batch size 1
+2025-10-02 22:12:53,480 - INFO - Successfully loaded model architecture
+2025-10-02 22:12:53,480 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-02 22:12:56,102 - INFO - Checkpoint loaded successfully
+2025-10-02 22:13:01,344 - INFO - Inference completed
+2025-10-02 22:14:44,241 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-02 22:14:44,255 - INFO - Created dataset with 5369 images
+2025-10-02 22:14:44,255 - INFO - Created dataloader with batch size 1
+2025-10-02 22:14:46,794 - INFO - Successfully loaded model architecture
+2025-10-02 22:14:46,794 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-02 22:14:48,458 - INFO - Checkpoint loaded successfully
+2025-10-02 22:15:28,341 - INFO - Inference completed
+2025-10-03 05:04:09,970 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-03 05:04:09,979 - INFO - Created dataset with 180 images
+2025-10-03 05:04:09,979 - INFO - Created dataloader with batch size 1
+2025-10-03 05:04:11,998 - INFO - Successfully loaded model architecture
+2025-10-03 05:04:11,999 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-03 05:04:15,142 - INFO - Checkpoint loaded successfully
+2025-10-03 05:04:21,144 - INFO - Inference completed
+2025-10-03 05:06:13,826 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-03 05:06:13,841 - INFO - Created dataset with 5369 images
+2025-10-03 05:06:13,841 - INFO - Created dataloader with batch size 1
+2025-10-03 05:06:15,274 - INFO - Successfully loaded model architecture
+2025-10-03 05:06:15,274 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-03 05:06:17,851 - INFO - Checkpoint loaded successfully
+2025-10-03 05:07:19,422 - INFO - Inference completed
+2025-10-03 05:11:32,815 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-03 05:11:32,823 - INFO - Created dataset with 180 images
+2025-10-03 05:11:32,824 - INFO - Created dataloader with batch size 1
+2025-10-03 05:11:34,130 - INFO - Successfully loaded model architecture
+2025-10-03 05:11:34,130 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-03 05:11:35,276 - INFO - Checkpoint loaded successfully
+2025-10-03 05:11:39,862 - INFO - Inference completed
+2025-10-03 05:13:29,611 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-03 05:13:29,625 - INFO - Created dataset with 5369 images
+2025-10-03 05:13:29,625 - INFO - Created dataloader with batch size 1
+2025-10-03 05:13:31,132 - INFO - Successfully loaded model architecture
+2025-10-03 05:13:31,132 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-03 05:13:33,109 - INFO - Checkpoint loaded successfully
+2025-10-03 05:14:12,103 - INFO - Inference completed
+2025-10-03 07:34:04,696 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-03 07:34:04,706 - INFO - Created dataset with 180 images
+2025-10-03 07:34:04,706 - INFO - Created dataloader with batch size 1
+2025-10-03 07:34:06,615 - INFO - Successfully loaded model architecture
+2025-10-03 07:34:06,615 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-03 07:34:13,739 - INFO - Checkpoint loaded successfully
+2025-10-03 07:34:21,247 - INFO - Inference completed
+2025-10-03 07:36:25,945 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-03 07:36:25,960 - INFO - Created dataset with 5369 images
+2025-10-03 07:36:25,960 - INFO - Created dataloader with batch size 1
+2025-10-03 07:36:27,396 - INFO - Successfully loaded model architecture
+2025-10-03 07:36:27,396 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-03 07:36:30,274 - INFO - Checkpoint loaded successfully
+2025-10-03 07:37:22,472 - INFO - Inference completed
+2025-10-04 06:21:22,251 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-04 06:21:22,260 - INFO - Created dataset with 72 images
+2025-10-04 06:21:22,260 - INFO - Created dataloader with batch size 1
+2025-10-04 06:21:25,018 - INFO - Successfully loaded model architecture
+2025-10-04 06:21:25,018 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-04 06:21:28,449 - INFO - Checkpoint loaded successfully
+2025-10-04 06:31:16,691 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-04 06:31:16,699 - INFO - Created dataset with 72 images
+2025-10-04 06:31:16,699 - INFO - Created dataloader with batch size 1
+2025-10-04 06:31:18,643 - INFO - Successfully loaded model architecture
+2025-10-04 06:31:18,644 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-04 06:31:20,937 - INFO - Checkpoint loaded successfully
+2025-10-04 06:31:29,128 - INFO - Inference completed
+2025-10-04 06:35:04,598 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-04 06:35:04,607 - INFO - Created dataset with 72 images
+2025-10-04 06:35:04,607 - INFO - Created dataloader with batch size 1
+2025-10-04 06:35:06,450 - INFO - Successfully loaded model architecture
+2025-10-04 06:35:06,450 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-04 06:35:08,818 - INFO - Checkpoint loaded successfully
+2025-10-04 06:35:11,050 - INFO - Inference completed
+2025-10-04 06:59:14,430 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-04 06:59:14,439 - INFO - Created dataset with 72 images
+2025-10-04 06:59:14,439 - INFO - Created dataloader with batch size 1
+2025-10-04 06:59:16,483 - INFO - Successfully loaded model architecture
+2025-10-04 06:59:16,484 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-04 06:59:19,129 - INFO - Checkpoint loaded successfully
+2025-10-04 06:59:21,648 - INFO - Inference completed
+2025-10-04 07:24:18,870 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-04 07:24:18,879 - INFO - Created dataset with 72 images
+2025-10-04 07:24:18,879 - INFO - Created dataloader with batch size 1
+2025-10-04 07:24:20,781 - INFO - Successfully loaded model architecture
+2025-10-04 07:24:20,781 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-04 07:24:24,173 - INFO - Checkpoint loaded successfully
+2025-10-04 07:24:26,794 - INFO - Inference completed
+2025-10-04 07:28:43,607 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-04 07:28:43,615 - INFO - Created dataset with 72 images
+2025-10-04 07:28:43,615 - INFO - Created dataloader with batch size 1
+2025-10-04 07:29:48,192 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-04 07:29:48,201 - INFO - Created dataset with 72 images
+2025-10-04 07:29:48,201 - INFO - Created dataloader with batch size 1
+2025-10-04 07:29:50,101 - INFO - Successfully loaded model architecture
+2025-10-04 07:29:50,101 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-04 07:29:53,127 - INFO - Checkpoint loaded successfully
+2025-10-04 07:29:55,637 - INFO - Inference completed
+2025-10-04 07:31:40,441 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-04 07:31:40,450 - INFO - Created dataset with 72 images
+2025-10-04 07:31:40,450 - INFO - Created dataloader with batch size 1
+2025-10-04 07:31:42,044 - INFO - Successfully loaded model architecture
+2025-10-04 07:31:42,045 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-04 07:31:43,739 - INFO - Checkpoint loaded successfully
+2025-10-04 07:31:51,975 - INFO - Inference completed
+2025-10-04 13:26:50,823 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-04 13:26:50,832 - INFO - Created dataset with 180 images
+2025-10-04 13:26:50,833 - INFO - Created dataloader with batch size 1
+2025-10-04 13:26:52,853 - INFO - Successfully loaded model architecture
+2025-10-04 13:26:52,853 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-04 13:26:55,576 - INFO - Checkpoint loaded successfully
+2025-10-04 13:27:01,880 - INFO - Inference completed
+2025-10-04 13:28:57,017 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-04 13:28:57,031 - INFO - Created dataset with 5369 images
+2025-10-04 13:28:57,032 - INFO - Created dataloader with batch size 1
+2025-10-04 13:28:58,640 - INFO - Successfully loaded model architecture
+2025-10-04 13:28:58,640 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-04 13:29:00,312 - INFO - Checkpoint loaded successfully
+2025-10-04 13:30:01,665 - INFO - Inference completed
+2025-10-04 18:25:45,515 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-04 18:25:45,524 - INFO - Created dataset with 180 images
+2025-10-04 18:25:45,524 - INFO - Created dataloader with batch size 1
+2025-10-04 18:25:47,444 - INFO - Successfully loaded model architecture
+2025-10-04 18:25:47,444 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-04 18:25:50,147 - INFO - Checkpoint loaded successfully
+2025-10-04 18:25:56,440 - INFO - Inference completed
+2025-10-04 18:27:55,010 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-04 18:27:55,026 - INFO - Created dataset with 5369 images
+2025-10-04 18:27:55,027 - INFO - Created dataloader with batch size 1
+2025-10-04 18:27:56,560 - INFO - Successfully loaded model architecture
+2025-10-04 18:27:56,560 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-04 18:27:58,301 - INFO - Checkpoint loaded successfully
+2025-10-04 18:29:01,179 - INFO - Inference completed
+2025-10-05 15:54:09,912 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-05 15:54:09,963 - INFO - Created dataset with 180 images
+2025-10-05 15:54:09,964 - INFO - Created dataloader with batch size 1
+2025-10-05 15:54:13,453 - INFO - Successfully loaded model architecture
+2025-10-05 15:54:13,453 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-05 15:54:20,443 - INFO - Checkpoint loaded successfully
+2025-10-05 15:54:37,780 - INFO - Inference completed
+2025-10-05 15:59:39,927 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-05 15:59:39,987 - INFO - Created dataset with 5369 images
+2025-10-05 15:59:39,987 - INFO - Created dataloader with batch size 1
+2025-10-05 15:59:43,438 - INFO - Successfully loaded model architecture
+2025-10-05 15:59:43,438 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-05 15:59:48,122 - INFO - Checkpoint loaded successfully
+2025-10-05 16:02:23,569 - INFO - Inference completed
+2025-10-22 09:57:12,004 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 09:57:12,009 - INFO - Created dataset with 72 images
+2025-10-22 09:57:12,009 - INFO - Created dataloader with batch size 1
+2025-10-22 09:58:01,346 - INFO - Successfully loaded model architecture
+2025-10-22 09:58:01,356 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 09:58:04,278 - INFO - Checkpoint loaded successfully
+2025-10-22 09:58:29,916 - INFO - Inference completed
+2025-10-22 10:19:58,722 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 10:19:58,728 - INFO - Created dataset with 72 images
+2025-10-22 10:19:58,728 - INFO - Created dataloader with batch size 1
+2025-10-22 10:20:00,526 - INFO - Successfully loaded model architecture
+2025-10-22 10:20:00,526 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 10:20:03,359 - INFO - Checkpoint loaded successfully
+2025-10-22 10:20:28,960 - INFO - Inference completed
+2025-10-22 10:43:53,982 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 10:43:53,991 - INFO - Created dataset with 72 images
+2025-10-22 10:43:53,991 - INFO - Created dataloader with batch size 1
+2025-10-22 10:43:55,884 - INFO - Successfully loaded model architecture
+2025-10-22 10:43:55,884 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 10:43:58,740 - INFO - Checkpoint loaded successfully
+2025-10-22 10:44:33,726 - INFO - Inference completed
+2025-10-22 10:56:57,240 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 10:56:57,251 - INFO - Created dataset with 72 images
+2025-10-22 10:56:57,251 - INFO - Created dataloader with batch size 1
+2025-10-22 10:56:58,980 - INFO - Successfully loaded model architecture
+2025-10-22 10:56:58,981 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 10:57:01,658 - INFO - Checkpoint loaded successfully
+2025-10-22 10:57:29,318 - INFO - Inference completed
+2025-10-22 11:10:31,506 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 11:10:31,515 - INFO - Created dataset with 72 images
+2025-10-22 11:10:31,516 - INFO - Created dataloader with batch size 1
+2025-10-22 11:10:33,833 - INFO - Successfully loaded model architecture
+2025-10-22 11:10:33,834 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 11:10:35,939 - INFO - Checkpoint loaded successfully
+2025-10-22 11:11:05,495 - INFO - Inference completed
+2025-10-22 11:21:55,362 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 11:21:55,371 - INFO - Created dataset with 72 images
+2025-10-22 11:21:55,371 - INFO - Created dataloader with batch size 1
+2025-10-22 11:21:56,815 - INFO - Successfully loaded model architecture
+2025-10-22 11:21:56,815 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 11:21:59,648 - INFO - Checkpoint loaded successfully
+2025-10-22 11:22:31,786 - INFO - Inference completed
+2025-10-22 11:33:33,539 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 11:33:33,548 - INFO - Created dataset with 64 images
+2025-10-22 11:33:33,548 - INFO - Created dataloader with batch size 1
+2025-10-22 11:33:35,199 - INFO - Successfully loaded model architecture
+2025-10-22 11:33:35,199 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 11:33:38,318 - INFO - Checkpoint loaded successfully
+2025-10-22 11:36:36,229 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 11:36:36,238 - INFO - Created dataset with 72 images
+2025-10-22 11:36:36,238 - INFO - Created dataloader with batch size 1
+2025-10-22 11:36:38,255 - INFO - Successfully loaded model architecture
+2025-10-22 11:36:38,255 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 11:36:41,180 - INFO - Checkpoint loaded successfully
+2025-10-22 11:37:14,284 - INFO - Inference completed
+2025-10-22 12:06:37,381 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 12:06:37,390 - INFO - Created dataset with 72 images
+2025-10-22 12:06:37,390 - INFO - Created dataloader with batch size 1
+2025-10-22 12:06:39,360 - INFO - Successfully loaded model architecture
+2025-10-22 12:06:39,360 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 12:06:41,737 - INFO - Checkpoint loaded successfully
+2025-10-22 12:07:13,942 - INFO - Inference completed
+2025-10-22 12:24:45,202 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 12:24:45,210 - INFO - Created dataset with 72 images
+2025-10-22 12:24:45,211 - INFO - Created dataloader with batch size 1
+2025-10-22 12:24:47,083 - INFO - Successfully loaded model architecture
+2025-10-22 12:24:47,083 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 12:24:49,386 - INFO - Checkpoint loaded successfully
+2025-10-22 12:25:17,492 - INFO - Inference completed
+2025-10-22 12:39:47,593 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 12:39:47,601 - INFO - Created dataset with 72 images
+2025-10-22 12:39:47,602 - INFO - Created dataloader with batch size 1
+2025-10-22 12:39:49,465 - INFO - Successfully loaded model architecture
+2025-10-22 12:39:49,465 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 12:39:52,328 - INFO - Checkpoint loaded successfully
+2025-10-22 12:42:40,701 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 12:42:40,710 - INFO - Created dataset with 72 images
+2025-10-22 12:42:40,710 - INFO - Created dataloader with batch size 1
+2025-10-22 12:42:42,476 - INFO - Successfully loaded model architecture
+2025-10-22 12:42:42,476 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 12:42:45,527 - INFO - Checkpoint loaded successfully
+2025-10-22 12:43:15,962 - INFO - Inference completed
+2025-10-22 12:53:56,725 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 12:53:56,732 - INFO - Created dataset with 66 images
+2025-10-22 12:53:56,733 - INFO - Created dataloader with batch size 1
+2025-10-22 12:53:58,284 - INFO - Successfully loaded model architecture
+2025-10-22 12:53:58,284 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 12:54:01,268 - INFO - Checkpoint loaded successfully
+2025-10-22 12:54:23,753 - INFO - Inference completed
+2025-10-22 13:08:36,702 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 13:08:36,711 - INFO - Created dataset with 72 images
+2025-10-22 13:08:36,711 - INFO - Created dataloader with batch size 1
+2025-10-22 13:08:38,585 - INFO - Successfully loaded model architecture
+2025-10-22 13:08:38,585 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 13:08:41,446 - INFO - Checkpoint loaded successfully
+2025-10-22 13:09:14,405 - INFO - Inference completed
+2025-10-22 13:19:32,902 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 13:19:32,911 - INFO - Created dataset with 54 images
+2025-10-22 13:19:32,911 - INFO - Created dataloader with batch size 1
+2025-10-22 13:19:34,694 - INFO - Successfully loaded model architecture
+2025-10-22 13:19:34,694 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 13:19:36,656 - INFO - Checkpoint loaded successfully
+2025-10-22 13:19:53,717 - INFO - Inference completed
+2025-10-22 13:28:48,872 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 13:28:48,881 - INFO - Created dataset with 72 images
+2025-10-22 13:28:48,881 - INFO - Created dataloader with batch size 1
+2025-10-22 13:28:50,530 - INFO - Successfully loaded model architecture
+2025-10-22 13:28:50,531 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 13:28:52,622 - INFO - Checkpoint loaded successfully
+2025-10-22 13:29:20,087 - INFO - Inference completed
+2025-10-22 13:45:44,307 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 13:45:44,315 - INFO - Created dataset with 72 images
+2025-10-22 13:45:44,315 - INFO - Created dataloader with batch size 1
+2025-10-22 13:45:46,321 - INFO - Successfully loaded model architecture
+2025-10-22 13:45:46,321 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 13:45:49,224 - INFO - Checkpoint loaded successfully
+2025-10-22 13:46:16,401 - INFO - Inference completed
+2025-10-22 14:00:09,881 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 14:00:09,891 - INFO - Created dataset with 72 images
+2025-10-22 14:00:09,891 - INFO - Created dataloader with batch size 1
+2025-10-22 14:00:11,672 - INFO - Successfully loaded model architecture
+2025-10-22 14:00:11,672 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 14:00:14,639 - INFO - Checkpoint loaded successfully
+2025-10-22 14:03:05,062 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 14:03:05,071 - INFO - Created dataset with 72 images
+2025-10-22 14:03:05,071 - INFO - Created dataloader with batch size 1
+2025-10-22 14:03:06,794 - INFO - Successfully loaded model architecture
+2025-10-22 14:03:06,795 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 14:03:09,673 - INFO - Checkpoint loaded successfully
+2025-10-22 14:03:43,950 - INFO - Inference completed
+2025-10-22 14:21:42,488 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 14:21:42,496 - INFO - Created dataset with 72 images
+2025-10-22 14:21:42,496 - INFO - Created dataloader with batch size 1
+2025-10-22 14:21:44,466 - INFO - Successfully loaded model architecture
+2025-10-22 14:21:44,466 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 14:21:47,376 - INFO - Checkpoint loaded successfully
+2025-10-22 14:22:24,405 - INFO - Inference completed
+2025-10-22 14:40:02,279 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 14:40:02,287 - INFO - Created dataset with 72 images
+2025-10-22 14:40:02,288 - INFO - Created dataloader with batch size 1
+2025-10-22 14:40:04,492 - INFO - Successfully loaded model architecture
+2025-10-22 14:40:04,492 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 14:40:06,580 - INFO - Checkpoint loaded successfully
+2025-10-22 14:40:38,022 - INFO - Inference completed
+2025-10-22 14:58:15,427 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 14:58:15,435 - INFO - Created dataset with 72 images
+2025-10-22 14:58:15,435 - INFO - Created dataloader with batch size 1
+2025-10-22 14:58:18,225 - INFO - Successfully loaded model architecture
+2025-10-22 14:58:18,226 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 14:58:20,361 - INFO - Checkpoint loaded successfully
+2025-10-22 14:58:38,048 - WARNING - No phrases extracted for image: 446485069.jpeg, skipping
+2025-10-22 14:58:46,160 - INFO - Inference completed
+2025-10-22 15:04:05,987 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 15:04:05,996 - INFO - Created dataset with 72 images
+2025-10-22 15:04:05,997 - INFO - Created dataloader with batch size 1
+2025-10-22 15:04:07,650 - INFO - Successfully loaded model architecture
+2025-10-22 15:04:07,651 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 15:04:10,869 - INFO - Checkpoint loaded successfully
+2025-10-22 15:04:35,433 - INFO - Inference completed
+2025-10-22 15:15:15,200 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 15:15:15,209 - INFO - Created dataset with 58 images
+2025-10-22 15:15:15,209 - INFO - Created dataloader with batch size 1
+2025-10-22 15:15:17,369 - INFO - Successfully loaded model architecture
+2025-10-22 15:15:17,370 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 15:15:19,544 - INFO - Checkpoint loaded successfully
+2025-10-22 15:15:41,482 - INFO - Inference completed
+2025-10-22 15:23:21,693 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 15:23:21,703 - INFO - Created dataset with 69 images
+2025-10-22 15:23:21,703 - INFO - Created dataloader with batch size 1
+2025-10-22 15:23:23,448 - INFO - Successfully loaded model architecture
+2025-10-22 15:23:23,449 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 15:23:25,149 - INFO - Checkpoint loaded successfully
+2025-10-22 15:24:27,900 - INFO - Inference completed
+2025-10-22 15:38:46,402 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 15:38:46,411 - INFO - Created dataset with 72 images
+2025-10-22 15:38:46,411 - INFO - Created dataloader with batch size 1
+2025-10-22 15:38:48,195 - INFO - Successfully loaded model architecture
+2025-10-22 15:38:48,196 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 15:38:50,271 - INFO - Checkpoint loaded successfully
+2025-10-22 15:39:22,351 - INFO - Inference completed
+2025-10-22 15:49:22,011 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 15:49:22,019 - INFO - Created dataset with 72 images
+2025-10-22 15:49:22,020 - INFO - Created dataloader with batch size 1
+2025-10-22 15:49:23,932 - INFO - Successfully loaded model architecture
+2025-10-22 15:49:23,933 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 15:49:26,980 - INFO - Checkpoint loaded successfully
+2025-10-22 15:49:58,840 - INFO - Inference completed
+2025-10-22 16:03:31,968 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 16:03:31,976 - INFO - Created dataset with 72 images
+2025-10-22 16:03:31,977 - INFO - Created dataloader with batch size 1
+2025-10-22 16:03:34,133 - INFO - Successfully loaded model architecture
+2025-10-22 16:03:34,133 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 16:03:36,950 - INFO - Checkpoint loaded successfully
+2025-10-22 16:04:05,266 - INFO - Inference completed
+2025-10-22 16:15:49,342 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 16:15:49,351 - INFO - Created dataset with 72 images
+2025-10-22 16:15:49,352 - INFO - Created dataloader with batch size 1
+2025-10-22 16:15:51,774 - INFO - Successfully loaded model architecture
+2025-10-22 16:15:51,774 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 16:15:53,627 - INFO - Checkpoint loaded successfully
+2025-10-22 16:16:18,974 - INFO - Inference completed
+2025-10-22 16:32:30,564 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 16:32:30,573 - INFO - Created dataset with 69 images
+2025-10-22 16:32:30,573 - INFO - Created dataloader with batch size 1
+2025-10-22 16:32:32,712 - INFO - Successfully loaded model architecture
+2025-10-22 16:32:32,712 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 16:32:35,626 - INFO - Checkpoint loaded successfully
+2025-10-22 16:33:02,155 - INFO - Inference completed
+2025-10-22 16:47:07,993 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 16:47:08,003 - INFO - Created dataset with 72 images
+2025-10-22 16:47:08,003 - INFO - Created dataloader with batch size 1
+2025-10-22 16:47:09,999 - INFO - Successfully loaded model architecture
+2025-10-22 16:47:09,999 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 16:47:13,166 - INFO - Checkpoint loaded successfully
+2025-10-22 16:47:41,315 - INFO - Inference completed
+2025-10-22 17:00:05,542 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 17:00:05,550 - INFO - Created dataset with 72 images
+2025-10-22 17:00:05,550 - INFO - Created dataloader with batch size 1
+2025-10-22 17:00:07,306 - INFO - Successfully loaded model architecture
+2025-10-22 17:00:07,307 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 17:00:10,134 - INFO - Checkpoint loaded successfully
+2025-10-22 17:01:00,529 - INFO - Inference completed
+2025-10-22 17:22:21,031 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 17:22:21,040 - INFO - Created dataset with 72 images
+2025-10-22 17:22:21,040 - INFO - Created dataloader with batch size 1
+2025-10-22 17:22:22,757 - INFO - Successfully loaded model architecture
+2025-10-22 17:22:22,757 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 17:22:26,534 - INFO - Checkpoint loaded successfully
+2025-10-22 17:23:11,520 - INFO - Inference completed
+2025-10-22 17:34:51,293 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 17:34:51,302 - INFO - Created dataset with 72 images
+2025-10-22 17:34:51,302 - INFO - Created dataloader with batch size 1
+2025-10-22 17:34:53,042 - INFO - Successfully loaded model architecture
+2025-10-22 17:34:53,042 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 17:34:55,123 - INFO - Checkpoint loaded successfully
+2025-10-22 17:35:19,793 - INFO - Inference completed
+2025-10-22 17:50:12,438 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 17:50:12,447 - INFO - Created dataset with 72 images
+2025-10-22 17:50:12,447 - INFO - Created dataloader with batch size 1
+2025-10-22 17:50:13,867 - INFO - Successfully loaded model architecture
+2025-10-22 17:50:13,867 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 17:50:15,478 - INFO - Checkpoint loaded successfully
+2025-10-22 17:51:14,126 - INFO - Inference completed
+2025-10-22 18:12:56,087 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 18:12:56,096 - INFO - Created dataset with 72 images
+2025-10-22 18:12:56,097 - INFO - Created dataloader with batch size 1
+2025-10-22 18:12:57,941 - INFO - Successfully loaded model architecture
+2025-10-22 18:12:57,941 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 18:13:02,326 - INFO - Checkpoint loaded successfully
+2025-10-22 18:13:39,607 - INFO - Inference completed
+2025-10-22 18:28:31,957 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 18:28:31,965 - INFO - Created dataset with 72 images
+2025-10-22 18:28:31,966 - INFO - Created dataloader with batch size 1
+2025-10-22 18:28:33,997 - INFO - Successfully loaded model architecture
+2025-10-22 18:28:33,997 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 18:28:36,431 - INFO - Checkpoint loaded successfully
+2025-10-22 18:29:04,157 - INFO - Inference completed
+2025-10-22 18:35:57,896 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 18:35:57,904 - INFO - Created dataset with 72 images
+2025-10-22 18:35:57,904 - INFO - Created dataloader with batch size 1
+2025-10-22 18:35:59,634 - INFO - Successfully loaded model architecture
+2025-10-22 18:35:59,634 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 18:36:02,398 - INFO - Checkpoint loaded successfully
+2025-10-22 18:36:26,908 - INFO - Inference completed
+2025-10-22 18:49:16,212 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 18:49:16,220 - INFO - Created dataset with 72 images
+2025-10-22 18:49:16,220 - INFO - Created dataloader with batch size 1
+2025-10-22 18:49:18,197 - INFO - Successfully loaded model architecture
+2025-10-22 18:49:18,197 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 18:49:20,622 - INFO - Checkpoint loaded successfully
+2025-10-22 18:49:45,030 - INFO - Inference completed
+2025-10-22 19:07:01,824 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 19:07:01,833 - INFO - Created dataset with 72 images
+2025-10-22 19:07:01,834 - INFO - Created dataloader with batch size 1
+2025-10-22 19:07:03,692 - INFO - Successfully loaded model architecture
+2025-10-22 19:07:03,692 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 19:07:05,976 - INFO - Checkpoint loaded successfully
+2025-10-22 19:07:37,346 - INFO - Inference completed
+2025-10-22 19:18:44,675 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 19:18:44,685 - INFO - Created dataset with 72 images
+2025-10-22 19:18:44,685 - INFO - Created dataloader with batch size 1
+2025-10-22 19:18:46,359 - INFO - Successfully loaded model architecture
+2025-10-22 19:18:46,360 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 19:18:48,686 - INFO - Checkpoint loaded successfully
+2025-10-22 19:19:17,842 - INFO - Inference completed
+2025-10-22 19:37:55,637 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 19:37:55,647 - INFO - Created dataset with 72 images
+2025-10-22 19:37:55,647 - INFO - Created dataloader with batch size 1
+2025-10-22 19:37:57,727 - INFO - Successfully loaded model architecture
+2025-10-22 19:37:57,727 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 19:38:00,513 - INFO - Checkpoint loaded successfully
+2025-10-22 19:38:27,925 - INFO - Inference completed
+2025-10-22 19:49:01,142 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 19:49:01,150 - INFO - Created dataset with 72 images
+2025-10-22 19:49:01,150 - INFO - Created dataloader with batch size 1
+2025-10-22 19:49:02,964 - INFO - Successfully loaded model architecture
+2025-10-22 19:49:02,965 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 19:49:06,013 - INFO - Checkpoint loaded successfully
+2025-10-22 19:49:30,550 - INFO - Inference completed
+2025-10-22 19:58:07,145 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 19:58:07,154 - INFO - Created dataset with 72 images
+2025-10-22 19:58:07,154 - INFO - Created dataloader with batch size 1
+2025-10-22 19:58:09,030 - INFO - Successfully loaded model architecture
+2025-10-22 19:58:09,030 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 19:58:11,831 - INFO - Checkpoint loaded successfully
+2025-10-22 19:58:39,807 - INFO - Inference completed
+2025-10-22 20:08:10,228 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 20:08:10,237 - INFO - Created dataset with 72 images
+2025-10-22 20:08:10,237 - INFO - Created dataloader with batch size 1
+2025-10-22 20:08:12,371 - INFO - Successfully loaded model architecture
+2025-10-22 20:08:12,371 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 20:08:15,273 - INFO - Checkpoint loaded successfully
+2025-10-22 20:08:43,565 - INFO - Inference completed
+2025-10-22 20:19:12,821 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 20:19:12,830 - INFO - Created dataset with 72 images
+2025-10-22 20:19:12,830 - INFO - Created dataloader with batch size 1
+2025-10-22 20:19:14,807 - INFO - Successfully loaded model architecture
+2025-10-22 20:19:14,807 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 20:19:16,803 - INFO - Checkpoint loaded successfully
+2025-10-22 20:19:46,745 - INFO - Inference completed
+2025-10-22 20:38:47,031 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 20:38:47,040 - INFO - Created dataset with 72 images
+2025-10-22 20:38:47,040 - INFO - Created dataloader with batch size 1
+2025-10-22 20:38:49,345 - INFO - Successfully loaded model architecture
+2025-10-22 20:38:49,346 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 20:38:51,126 - INFO - Checkpoint loaded successfully
+2025-10-22 20:39:14,425 - INFO - Inference completed
+2025-10-22 20:59:26,429 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 20:59:26,438 - INFO - Created dataset with 72 images
+2025-10-22 20:59:26,438 - INFO - Created dataloader with batch size 1
+2025-10-22 20:59:28,206 - INFO - Successfully loaded model architecture
+2025-10-22 20:59:28,206 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 20:59:31,046 - INFO - Checkpoint loaded successfully
+2025-10-22 20:59:49,327 - INFO - Inference completed
+2025-10-22 21:08:38,347 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 21:08:38,356 - INFO - Created dataset with 72 images
+2025-10-22 21:08:38,357 - INFO - Created dataloader with batch size 1
+2025-10-22 21:08:39,872 - INFO - Successfully loaded model architecture
+2025-10-22 21:08:39,872 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 21:08:42,843 - INFO - Checkpoint loaded successfully
+2025-10-22 21:09:10,789 - INFO - Inference completed
+2025-10-22 21:36:09,120 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 21:36:09,129 - INFO - Created dataset with 72 images
+2025-10-22 21:36:09,129 - INFO - Created dataloader with batch size 1
+2025-10-22 21:36:10,503 - INFO - Successfully loaded model architecture
+2025-10-22 21:36:10,503 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 21:36:13,092 - INFO - Checkpoint loaded successfully
+2025-10-22 21:36:39,444 - INFO - Inference completed
+2025-10-22 22:00:01,675 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 22:00:01,684 - INFO - Created dataset with 58 images
+2025-10-22 22:00:01,684 - INFO - Created dataloader with batch size 1
+2025-10-22 22:00:03,406 - INFO - Successfully loaded model architecture
+2025-10-22 22:00:03,406 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 22:00:06,209 - INFO - Checkpoint loaded successfully
+2025-10-22 22:00:27,104 - INFO - Inference completed
+2025-10-22 22:08:08,468 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 22:08:08,477 - INFO - Created dataset with 72 images
+2025-10-22 22:08:08,477 - INFO - Created dataloader with batch size 1
+2025-10-22 22:08:10,783 - INFO - Successfully loaded model architecture
+2025-10-22 22:08:10,783 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 22:08:13,028 - INFO - Checkpoint loaded successfully
+2025-10-22 22:08:35,155 - INFO - Inference completed
+2025-10-22 22:18:44,923 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 22:18:44,932 - INFO - Created dataset with 72 images
+2025-10-22 22:18:44,932 - INFO - Created dataloader with batch size 1
+2025-10-22 22:18:50,703 - INFO - Successfully loaded model architecture
+2025-10-22 22:18:50,703 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 22:18:52,957 - INFO - Checkpoint loaded successfully
+2025-10-22 22:19:16,364 - INFO - Inference completed
+2025-10-22 22:40:45,086 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 22:40:45,094 - INFO - Created dataset with 61 images
+2025-10-22 22:40:45,095 - INFO - Created dataloader with batch size 1
+2025-10-22 22:40:47,023 - INFO - Successfully loaded model architecture
+2025-10-22 22:40:47,024 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 22:40:49,863 - INFO - Checkpoint loaded successfully
+2025-10-22 22:41:10,800 - INFO - Inference completed
+2025-10-22 22:48:21,688 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 22:48:21,697 - INFO - Created dataset with 72 images
+2025-10-22 22:48:21,697 - INFO - Created dataloader with batch size 1
+2025-10-22 22:48:23,598 - INFO - Successfully loaded model architecture
+2025-10-22 22:48:23,598 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 22:48:26,231 - INFO - Checkpoint loaded successfully
+2025-10-22 22:48:55,765 - INFO - Inference completed
+2025-10-22 23:00:38,712 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 23:00:38,721 - INFO - Created dataset with 72 images
+2025-10-22 23:00:38,722 - INFO - Created dataloader with batch size 1
+2025-10-22 23:00:40,543 - INFO - Successfully loaded model architecture
+2025-10-22 23:00:40,543 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 23:00:43,119 - INFO - Checkpoint loaded successfully
+2025-10-22 23:01:12,548 - INFO - Inference completed
+2025-10-22 23:16:20,071 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 23:16:20,079 - INFO - Created dataset with 72 images
+2025-10-22 23:16:20,079 - INFO - Created dataloader with batch size 1
+2025-10-22 23:16:21,954 - INFO - Successfully loaded model architecture
+2025-10-22 23:16:21,954 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 23:16:24,503 - INFO - Checkpoint loaded successfully
+2025-10-22 23:16:49,354 - INFO - Inference completed
+2025-10-22 23:40:05,391 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 23:40:05,399 - INFO - Created dataset with 72 images
+2025-10-22 23:40:05,399 - INFO - Created dataloader with batch size 1
+2025-10-22 23:40:07,324 - INFO - Successfully loaded model architecture
+2025-10-22 23:40:07,324 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 23:40:09,808 - INFO - Checkpoint loaded successfully
+2025-10-22 23:40:34,637 - INFO - Inference completed
+2025-10-22 23:55:46,339 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-22 23:55:46,348 - INFO - Created dataset with 72 images
+2025-10-22 23:55:46,348 - INFO - Created dataloader with batch size 1
+2025-10-22 23:55:48,143 - INFO - Successfully loaded model architecture
+2025-10-22 23:55:48,143 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-22 23:55:50,435 - INFO - Checkpoint loaded successfully
+2025-10-22 23:56:21,741 - INFO - Inference completed
+2025-10-23 00:04:34,348 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 00:04:34,354 - INFO - Created dataset with 72 images
+2025-10-23 00:04:34,355 - INFO - Created dataloader with batch size 1
+2025-10-23 00:04:36,104 - INFO - Successfully loaded model architecture
+2025-10-23 00:04:36,104 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 00:04:39,161 - INFO - Checkpoint loaded successfully
+2025-10-23 00:05:04,397 - INFO - Inference completed
+2025-10-23 00:23:20,544 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 00:23:20,553 - INFO - Created dataset with 72 images
+2025-10-23 00:23:20,553 - INFO - Created dataloader with batch size 1
+2025-10-23 00:23:22,178 - INFO - Successfully loaded model architecture
+2025-10-23 00:23:22,178 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 00:23:24,639 - INFO - Checkpoint loaded successfully
+2025-10-23 00:23:51,854 - INFO - Inference completed
+2025-10-23 00:43:16,555 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 00:43:16,564 - INFO - Created dataset with 72 images
+2025-10-23 00:43:16,565 - INFO - Created dataloader with batch size 1
+2025-10-23 00:43:18,221 - INFO - Successfully loaded model architecture
+2025-10-23 00:43:18,221 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 00:43:21,711 - INFO - Checkpoint loaded successfully
+2025-10-23 00:44:01,669 - INFO - Inference completed
+2025-10-23 00:56:38,898 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 00:56:38,906 - INFO - Created dataset with 72 images
+2025-10-23 00:56:38,907 - INFO - Created dataloader with batch size 1
+2025-10-23 00:56:40,815 - INFO - Successfully loaded model architecture
+2025-10-23 00:56:40,815 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 00:56:43,714 - INFO - Checkpoint loaded successfully
+2025-10-23 00:57:09,115 - INFO - Inference completed
+2025-10-23 01:08:24,579 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 01:08:24,588 - INFO - Created dataset with 72 images
+2025-10-23 01:08:24,588 - INFO - Created dataloader with batch size 1
+2025-10-23 01:08:26,609 - INFO - Successfully loaded model architecture
+2025-10-23 01:08:26,609 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 01:08:29,101 - INFO - Checkpoint loaded successfully
+2025-10-23 01:08:51,537 - INFO - Inference completed
+2025-10-23 01:21:37,844 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 01:21:37,852 - INFO - Created dataset with 72 images
+2025-10-23 01:21:37,853 - INFO - Created dataloader with batch size 1
+2025-10-23 01:21:39,700 - INFO - Successfully loaded model architecture
+2025-10-23 01:21:39,700 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 01:21:42,048 - INFO - Checkpoint loaded successfully
+2025-10-23 01:22:12,639 - INFO - Inference completed
+2025-10-23 01:45:48,162 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 01:45:48,171 - INFO - Created dataset with 72 images
+2025-10-23 01:45:48,172 - INFO - Created dataloader with batch size 1
+2025-10-23 01:45:49,941 - INFO - Successfully loaded model architecture
+2025-10-23 01:45:49,941 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 01:45:52,598 - INFO - Checkpoint loaded successfully
+2025-10-23 01:46:20,365 - INFO - Inference completed
+2025-10-23 02:01:04,765 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 02:01:04,774 - INFO - Created dataset with 72 images
+2025-10-23 02:01:04,774 - INFO - Created dataloader with batch size 1
+2025-10-23 02:01:09,219 - INFO - Successfully loaded model architecture
+2025-10-23 02:01:09,219 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 02:01:11,352 - INFO - Checkpoint loaded successfully
+2025-10-23 02:01:33,723 - INFO - Inference completed
+2025-10-23 02:17:29,898 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 02:17:29,907 - INFO - Created dataset with 72 images
+2025-10-23 02:17:29,908 - INFO - Created dataloader with batch size 1
+2025-10-23 02:17:32,005 - INFO - Successfully loaded model architecture
+2025-10-23 02:17:32,005 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 02:17:34,163 - INFO - Checkpoint loaded successfully
+2025-10-23 02:18:08,815 - INFO - Inference completed
+2025-10-23 02:26:20,027 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 02:26:20,036 - INFO - Created dataset with 72 images
+2025-10-23 02:26:20,036 - INFO - Created dataloader with batch size 1
+2025-10-23 02:26:21,868 - INFO - Successfully loaded model architecture
+2025-10-23 02:26:21,868 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 02:26:24,719 - INFO - Checkpoint loaded successfully
+2025-10-23 02:26:49,955 - INFO - Inference completed
+2025-10-23 02:36:24,697 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 02:36:24,705 - INFO - Created dataset with 72 images
+2025-10-23 02:36:24,705 - INFO - Created dataloader with batch size 1
+2025-10-23 02:36:26,401 - INFO - Successfully loaded model architecture
+2025-10-23 02:36:26,401 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 02:36:28,936 - INFO - Checkpoint loaded successfully
+2025-10-23 02:36:57,490 - INFO - Inference completed
+2025-10-23 02:53:17,466 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 02:53:17,474 - INFO - Created dataset with 72 images
+2025-10-23 02:53:17,474 - INFO - Created dataloader with batch size 1
+2025-10-23 02:53:19,368 - INFO - Successfully loaded model architecture
+2025-10-23 02:53:19,368 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 02:53:21,629 - INFO - Checkpoint loaded successfully
+2025-10-23 02:53:49,404 - INFO - Inference completed
+2025-10-23 03:02:54,345 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 03:02:54,354 - INFO - Created dataset with 72 images
+2025-10-23 03:02:54,354 - INFO - Created dataloader with batch size 1
+2025-10-23 03:02:56,251 - INFO - Successfully loaded model architecture
+2025-10-23 03:02:56,251 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 03:02:58,942 - INFO - Checkpoint loaded successfully
+2025-10-23 03:03:29,101 - INFO - Inference completed
+2025-10-23 03:14:27,559 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 03:14:27,567 - INFO - Created dataset with 70 images
+2025-10-23 03:14:27,568 - INFO - Created dataloader with batch size 1
+2025-10-23 03:14:29,820 - INFO - Successfully loaded model architecture
+2025-10-23 03:14:29,821 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 03:14:32,266 - INFO - Checkpoint loaded successfully
+2025-10-23 03:14:54,188 - INFO - Inference completed
+2025-10-23 03:23:18,115 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 03:23:18,124 - INFO - Created dataset with 72 images
+2025-10-23 03:23:18,124 - INFO - Created dataloader with batch size 1
+2025-10-23 03:23:20,350 - INFO - Successfully loaded model architecture
+2025-10-23 03:23:20,350 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 03:23:22,395 - INFO - Checkpoint loaded successfully
+2025-10-23 03:23:46,359 - INFO - Inference completed
+2025-10-23 03:47:34,611 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 03:47:34,620 - INFO - Created dataset with 72 images
+2025-10-23 03:47:34,620 - INFO - Created dataloader with batch size 1
+2025-10-23 03:47:37,726 - INFO - Successfully loaded model architecture
+2025-10-23 03:47:37,727 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 03:47:41,138 - INFO - Checkpoint loaded successfully
+2025-10-23 03:51:15,443 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 03:51:15,451 - INFO - Created dataset with 72 images
+2025-10-23 03:51:15,452 - INFO - Created dataloader with batch size 1
+2025-10-23 03:51:17,719 - INFO - Successfully loaded model architecture
+2025-10-23 03:51:17,719 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 03:51:21,034 - INFO - Checkpoint loaded successfully
+2025-10-23 03:51:52,315 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,329 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 135, in forward
+    self.input_proj(src),
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 463, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 459, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,330 - ERROR - Error processing image: 211651541.jpg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,342 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,346 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,347 - ERROR - Error processing image: 177406029.jpeg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,359 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,360 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,360 - ERROR - Error processing image: 356168322.jpeg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,373 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,374 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,374 - ERROR - Error processing image: 211651580.jpg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,386 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,386 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,387 - ERROR - Error processing image: 404319987.jpeg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,398 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,398 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,398 - ERROR - Error processing image: 177406065.jpeg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,410 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,410 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,410 - ERROR - Error processing image: 243771513.jpg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,422 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,422 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,422 - ERROR - Error processing image: 356168369.jpeg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,434 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,434 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,434 - ERROR - Error processing image: 406097161.jpeg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,450 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,450 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,451 - ERROR - Error processing image: 167082872.jpg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,464 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,465 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,465 - ERROR - Error processing image: 401880021.jpeg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,477 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,477 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,477 - ERROR - Error processing image: 211651519.jpg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,488 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,489 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,489 - ERROR - Error processing image: 429939226.jpeg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,508 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,508 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,509 - ERROR - Error processing image: 177405988.jpeg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,538 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,538 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,538 - ERROR - Error processing image: 319553587.jpg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,548 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,549 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,549 - ERROR - Error processing image: 424292352.jpg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,637 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,638 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,638 - ERROR - Error processing image: 176708270.jpg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,646 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,647 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,647 - ERROR - Error processing image: 243771372.jpg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,657 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,657 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,658 - ERROR - Error processing image: 357124952.jpeg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,668 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,669 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,669 - ERROR - Error processing image: 167083037.jpg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,771 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,772 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,772 - ERROR - Error processing image: 356168413.jpeg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,781 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,781 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,781 - ERROR - Error processing image: 211651493.jpg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,789 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,790 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,790 - ERROR - Error processing image: 424292329.jpg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,798 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,798 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,799 - ERROR - Error processing image: 212929563.jpg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,839 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,839 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,839 - ERROR - Error processing image: 212929354.jpg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,849 - ERROR - Error during model inference: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:52,850 - ERROR - Traceback (most recent call last):
+  File "infer.py", line 113, in run_inference
+    memory_cache = model(image_b, phrases, encode_and_save=True)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/mdetr.py", line 129, in forward
+    features, pos = self.backbone(samples)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 169, in forward
+    xs = self[0](tensor_list)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/.cache/torch/hub/ashkamath_mdetr_main/models/backbone.py", line 154, in forward
+    xs = self.body(tensor_list.tensors)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/efficientnet.py", line 437, in forward
+    x = self.conv_stem(x)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "/home/abood/miniconda3/envs/grand_env_7/lib/python3.8/site-packages/timm/models/layers/conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+
+2025-10-23 03:51:52,850 - ERROR - Error processing image: 357124964.jpeg. Error: cuDNN error: CUDNN_STATUS_MAPPING_ERROR
+2025-10-23 03:51:53,924 - INFO - Inference completed
+2025-10-23 03:56:46,675 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 03:56:46,683 - INFO - Created dataset with 72 images
+2025-10-23 03:56:46,684 - INFO - Created dataloader with batch size 1
+2025-10-23 03:56:49,480 - INFO - Successfully loaded model architecture
+2025-10-23 03:56:49,480 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 03:56:59,024 - INFO - Checkpoint loaded successfully
+2025-10-23 03:57:27,173 - INFO - Inference completed
+2025-10-23 04:05:36,901 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 04:05:36,910 - INFO - Created dataset with 72 images
+2025-10-23 04:05:36,910 - INFO - Created dataloader with batch size 1
+2025-10-23 04:05:39,301 - INFO - Successfully loaded model architecture
+2025-10-23 04:05:39,302 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 04:05:43,271 - INFO - Checkpoint loaded successfully
+2025-10-23 04:06:14,484 - INFO - Inference completed
+2025-10-23 04:19:23,605 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 04:19:23,616 - INFO - Created dataset with 72 images
+2025-10-23 04:19:23,616 - INFO - Created dataloader with batch size 1
+2025-10-23 04:19:25,619 - INFO - Successfully loaded model architecture
+2025-10-23 04:19:25,619 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 04:19:33,072 - INFO - Checkpoint loaded successfully
+2025-10-23 04:20:20,061 - INFO - Inference completed
+2025-10-23 04:35:00,134 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 04:35:00,143 - INFO - Created dataset with 72 images
+2025-10-23 04:35:00,144 - INFO - Created dataloader with batch size 1
+2025-10-23 04:35:02,655 - INFO - Successfully loaded model architecture
+2025-10-23 04:35:02,655 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 04:35:12,169 - INFO - Checkpoint loaded successfully
+2025-10-23 04:36:38,606 - INFO - Inference completed
+2025-10-23 04:51:02,547 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 04:51:02,555 - INFO - Created dataset with 72 images
+2025-10-23 04:51:02,556 - INFO - Created dataloader with batch size 1
+2025-10-23 04:51:05,349 - INFO - Successfully loaded model architecture
+2025-10-23 04:51:05,349 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 04:51:09,656 - INFO - Checkpoint loaded successfully
+2025-10-23 04:52:23,585 - INFO - Inference completed
+2025-10-23 05:11:58,329 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 05:11:58,340 - INFO - Created dataset with 72 images
+2025-10-23 05:11:58,340 - INFO - Created dataloader with batch size 1
+2025-10-23 05:12:00,429 - INFO - Successfully loaded model architecture
+2025-10-23 05:12:00,430 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 05:12:10,899 - INFO - Checkpoint loaded successfully
+2025-10-23 05:12:47,616 - INFO - Inference completed
+2025-10-23 05:31:47,546 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 05:31:47,556 - INFO - Created dataset with 72 images
+2025-10-23 05:31:47,557 - INFO - Created dataloader with batch size 1
+2025-10-23 05:31:50,138 - INFO - Successfully loaded model architecture
+2025-10-23 05:31:50,138 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 05:32:08,997 - INFO - Checkpoint loaded successfully
+2025-10-23 05:33:09,440 - INFO - Inference completed
+2025-10-23 05:54:40,305 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 05:54:40,314 - INFO - Created dataset with 59 images
+2025-10-23 05:54:40,315 - INFO - Created dataloader with batch size 1
+2025-10-23 05:54:42,515 - INFO - Successfully loaded model architecture
+2025-10-23 05:54:42,515 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 05:54:50,350 - INFO - Checkpoint loaded successfully
+2025-10-23 05:55:44,302 - INFO - Inference completed
+2025-10-23 06:17:03,156 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 06:17:03,166 - INFO - Created dataset with 72 images
+2025-10-23 06:17:03,166 - INFO - Created dataloader with batch size 1
+2025-10-23 06:17:06,187 - INFO - Successfully loaded model architecture
+2025-10-23 06:17:06,187 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 06:17:16,348 - INFO - Checkpoint loaded successfully
+2025-10-23 06:18:01,306 - INFO - Inference completed
+2025-10-23 06:37:56,030 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 06:37:56,039 - INFO - Created dataset with 72 images
+2025-10-23 06:37:56,039 - INFO - Created dataloader with batch size 1
+2025-10-23 06:37:58,072 - INFO - Successfully loaded model architecture
+2025-10-23 06:37:58,072 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 06:38:02,448 - INFO - Checkpoint loaded successfully
+2025-10-23 06:38:29,664 - INFO - Inference completed
+2025-10-23 06:52:56,566 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 06:52:56,575 - INFO - Created dataset with 72 images
+2025-10-23 06:52:56,575 - INFO - Created dataloader with batch size 1
+2025-10-23 06:52:58,715 - INFO - Successfully loaded model architecture
+2025-10-23 06:52:58,715 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 06:53:05,684 - INFO - Checkpoint loaded successfully
+2025-10-23 06:53:39,993 - INFO - Inference completed
+2025-10-23 07:09:08,989 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 07:09:08,999 - INFO - Created dataset with 72 images
+2025-10-23 07:09:09,000 - INFO - Created dataloader with batch size 1
+2025-10-23 07:09:11,571 - INFO - Successfully loaded model architecture
+2025-10-23 07:09:11,572 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 07:09:21,728 - INFO - Checkpoint loaded successfully
+2025-10-23 07:10:16,761 - INFO - Inference completed
+2025-10-23 07:24:30,760 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 07:24:30,768 - INFO - Created dataset with 72 images
+2025-10-23 07:24:30,769 - INFO - Created dataloader with batch size 1
+2025-10-23 07:24:33,261 - INFO - Successfully loaded model architecture
+2025-10-23 07:24:33,261 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 07:24:40,281 - INFO - Checkpoint loaded successfully
+2025-10-23 07:25:58,300 - INFO - Inference completed
+2025-10-23 07:40:00,349 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 07:40:00,358 - INFO - Created dataset with 72 images
+2025-10-23 07:40:00,359 - INFO - Created dataloader with batch size 1
+2025-10-23 07:40:02,445 - INFO - Successfully loaded model architecture
+2025-10-23 07:40:02,445 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 07:40:12,516 - INFO - Checkpoint loaded successfully
+2025-10-23 07:40:53,524 - INFO - Inference completed
+2025-10-23 07:54:00,752 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 07:54:00,764 - INFO - Created dataset with 72 images
+2025-10-23 07:54:00,764 - INFO - Created dataloader with batch size 1
+2025-10-23 07:54:04,368 - INFO - Successfully loaded model architecture
+2025-10-23 07:54:04,369 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 07:54:13,089 - INFO - Checkpoint loaded successfully
+2025-10-23 07:55:34,303 - INFO - Inference completed
+2025-10-23 08:15:02,785 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 08:15:02,797 - INFO - Created dataset with 72 images
+2025-10-23 08:15:02,797 - INFO - Created dataloader with batch size 1
+2025-10-23 08:15:05,561 - INFO - Successfully loaded model architecture
+2025-10-23 08:15:05,562 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 08:15:15,077 - INFO - Checkpoint loaded successfully
+2025-10-23 08:16:50,490 - INFO - Inference completed
+2025-10-23 08:30:24,498 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 08:30:24,508 - INFO - Created dataset with 70 images
+2025-10-23 08:30:24,509 - INFO - Created dataloader with batch size 1
+2025-10-23 08:30:26,753 - INFO - Successfully loaded model architecture
+2025-10-23 08:30:26,753 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 08:30:33,576 - INFO - Checkpoint loaded successfully
+2025-10-23 08:31:02,889 - INFO - Inference completed
+2025-10-23 08:49:21,621 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 08:49:21,630 - INFO - Created dataset with 72 images
+2025-10-23 08:49:21,630 - INFO - Created dataloader with batch size 1
+2025-10-23 08:49:23,767 - INFO - Successfully loaded model architecture
+2025-10-23 08:49:23,767 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 08:49:42,530 - INFO - Checkpoint loaded successfully
+2025-10-23 08:50:31,196 - INFO - Inference completed
+2025-10-23 09:07:21,364 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 09:07:21,373 - INFO - Created dataset with 72 images
+2025-10-23 09:07:21,373 - INFO - Created dataloader with batch size 1
+2025-10-23 09:07:23,554 - INFO - Successfully loaded model architecture
+2025-10-23 09:07:23,554 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 09:07:29,145 - INFO - Checkpoint loaded successfully
+2025-10-23 09:08:32,416 - INFO - Inference completed
+2025-10-23 09:21:46,435 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 09:21:46,445 - INFO - Created dataset with 72 images
+2025-10-23 09:21:46,445 - INFO - Created dataloader with batch size 1
+2025-10-23 09:21:48,761 - INFO - Successfully loaded model architecture
+2025-10-23 09:21:48,762 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 09:21:53,447 - INFO - Checkpoint loaded successfully
+2025-10-23 09:22:27,007 - INFO - Inference completed
+2025-10-23 09:33:57,933 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 09:33:57,942 - INFO - Created dataset with 72 images
+2025-10-23 09:33:57,943 - INFO - Created dataloader with batch size 1
+2025-10-23 09:34:00,303 - INFO - Successfully loaded model architecture
+2025-10-23 09:34:00,303 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 09:34:05,735 - INFO - Checkpoint loaded successfully
+2025-10-23 09:34:30,012 - INFO - Inference completed
+2025-10-23 09:44:33,079 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 09:44:33,088 - INFO - Created dataset with 70 images
+2025-10-23 09:44:33,088 - INFO - Created dataloader with batch size 1
+2025-10-23 09:44:35,143 - INFO - Successfully loaded model architecture
+2025-10-23 09:44:35,143 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 09:44:38,424 - INFO - Checkpoint loaded successfully
+2025-10-23 09:45:39,260 - INFO - Inference completed
+2025-10-23 09:58:29,755 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 09:58:29,764 - INFO - Created dataset with 55 images
+2025-10-23 09:58:29,764 - INFO - Created dataloader with batch size 1
+2025-10-23 09:58:32,247 - INFO - Successfully loaded model architecture
+2025-10-23 09:58:32,247 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 09:58:40,190 - INFO - Checkpoint loaded successfully
+2025-10-23 09:59:12,462 - INFO - Inference completed
+2025-10-23 10:08:41,728 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 10:08:41,736 - INFO - Created dataset with 72 images
+2025-10-23 10:08:41,736 - INFO - Created dataloader with batch size 1
+2025-10-23 10:08:43,691 - INFO - Successfully loaded model architecture
+2025-10-23 10:08:43,691 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 10:08:46,407 - INFO - Checkpoint loaded successfully
+2025-10-23 10:09:10,786 - INFO - Inference completed
+2025-10-23 10:26:27,421 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 10:26:27,430 - INFO - Created dataset with 64 images
+2025-10-23 10:26:27,430 - INFO - Created dataloader with batch size 1
+2025-10-23 10:26:29,744 - INFO - Successfully loaded model architecture
+2025-10-23 10:26:29,745 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 10:26:32,080 - INFO - Checkpoint loaded successfully
+2025-10-23 10:28:41,956 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 10:28:41,965 - INFO - Created dataset with 72 images
+2025-10-23 10:28:41,966 - INFO - Created dataloader with batch size 1
+2025-10-23 10:28:45,490 - INFO - Successfully loaded model architecture
+2025-10-23 10:28:45,490 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 10:28:47,106 - INFO - Checkpoint loaded successfully
+2025-10-23 10:45:30,829 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 10:45:30,839 - INFO - Created dataset with 64 images
+2025-10-23 10:45:30,840 - INFO - Created dataloader with batch size 1
+2025-10-23 10:45:32,874 - INFO - Successfully loaded model architecture
+2025-10-23 10:45:32,874 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 10:45:34,992 - INFO - Checkpoint loaded successfully
+2025-10-23 10:49:07,694 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 10:49:07,706 - INFO - Created dataset with 72 images
+2025-10-23 10:49:07,706 - INFO - Created dataloader with batch size 1
+2025-10-23 10:49:13,745 - INFO - Successfully loaded model architecture
+2025-10-23 10:49:13,745 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 10:49:15,640 - INFO - Checkpoint loaded successfully
+2025-10-23 10:52:59,732 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 10:52:59,740 - INFO - Created dataset with 72 images
+2025-10-23 10:52:59,741 - INFO - Created dataloader with batch size 1
+2025-10-23 10:53:02,850 - INFO - Successfully loaded model architecture
+2025-10-23 10:53:02,850 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 10:53:04,678 - INFO - Checkpoint loaded successfully
+2025-10-23 10:55:58,926 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 10:55:58,935 - INFO - Created dataset with 72 images
+2025-10-23 10:55:58,935 - INFO - Created dataloader with batch size 1
+2025-10-23 10:56:00,721 - INFO - Successfully loaded model architecture
+2025-10-23 10:56:00,721 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 10:56:03,186 - INFO - Checkpoint loaded successfully
+2025-10-23 10:56:05,123 - WARNING - No phrases extracted for image: 446485069.jpeg, skipping
+2025-10-23 10:56:05,711 - INFO - Inference completed
+2025-10-23 11:24:47,589 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 11:24:47,598 - INFO - Created dataset with 72 images
+2025-10-23 11:24:47,598 - INFO - Created dataloader with batch size 1
+2025-10-23 11:24:49,655 - INFO - Successfully loaded model architecture
+2025-10-23 11:24:49,655 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 11:24:52,101 - INFO - Checkpoint loaded successfully
+2025-10-23 11:28:03,159 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 11:28:03,168 - INFO - Created dataset with 72 images
+2025-10-23 11:28:03,168 - INFO - Created dataloader with batch size 1
+2025-10-23 11:28:05,043 - INFO - Successfully loaded model architecture
+2025-10-23 11:28:05,043 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 11:28:07,832 - INFO - Checkpoint loaded successfully
+2025-10-23 11:28:19,626 - INFO - Inference completed
+2025-10-23 12:00:25,574 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 12:00:25,583 - INFO - Created dataset with 72 images
+2025-10-23 12:00:25,584 - INFO - Created dataloader with batch size 1
+2025-10-23 12:00:27,737 - INFO - Successfully loaded model architecture
+2025-10-23 12:00:27,737 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 12:00:30,613 - INFO - Checkpoint loaded successfully
+2025-10-23 12:01:28,426 - INFO - Inference completed
+2025-10-23 12:18:04,186 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 12:18:04,195 - INFO - Created dataset with 72 images
+2025-10-23 12:18:04,195 - INFO - Created dataloader with batch size 1
+2025-10-23 12:18:06,120 - INFO - Successfully loaded model architecture
+2025-10-23 12:18:06,120 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 12:18:13,787 - INFO - Checkpoint loaded successfully
+2025-10-23 12:18:43,684 - INFO - Inference completed
+2025-10-23 12:44:32,138 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 12:44:32,146 - INFO - Created dataset with 72 images
+2025-10-23 12:44:32,147 - INFO - Created dataloader with batch size 1
+2025-10-23 12:44:33,893 - INFO - Successfully loaded model architecture
+2025-10-23 12:44:33,893 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 12:44:36,813 - INFO - Checkpoint loaded successfully
+2025-10-23 12:44:44,630 - WARNING - No phrases extracted for image: 441760585.jpeg, skipping
+2025-10-23 12:45:02,809 - INFO - Inference completed
+2025-10-23 12:55:54,827 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 12:55:54,836 - INFO - Created dataset with 72 images
+2025-10-23 12:55:54,836 - INFO - Created dataloader with batch size 1
+2025-10-23 12:55:56,874 - INFO - Successfully loaded model architecture
+2025-10-23 12:55:56,874 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 12:55:59,623 - INFO - Checkpoint loaded successfully
+2025-10-23 12:58:29,792 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 12:58:29,800 - INFO - Created dataset with 72 images
+2025-10-23 12:58:29,801 - INFO - Created dataloader with batch size 1
+2025-10-23 12:58:31,726 - INFO - Successfully loaded model architecture
+2025-10-23 12:58:31,726 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 12:58:34,627 - INFO - Checkpoint loaded successfully
+2025-10-23 12:59:04,782 - INFO - Inference completed
+2025-10-23 13:15:53,611 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 13:15:53,620 - INFO - Created dataset with 72 images
+2025-10-23 13:15:53,620 - INFO - Created dataloader with batch size 1
+2025-10-23 13:15:55,538 - INFO - Successfully loaded model architecture
+2025-10-23 13:15:55,538 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 13:15:58,403 - INFO - Checkpoint loaded successfully
+2025-10-23 13:17:07,453 - INFO - Inference completed
+2025-10-23 13:43:35,452 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 13:43:35,460 - INFO - Created dataset with 72 images
+2025-10-23 13:43:35,461 - INFO - Created dataloader with batch size 1
+2025-10-23 13:43:37,487 - INFO - Successfully loaded model architecture
+2025-10-23 13:43:37,487 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 13:43:41,541 - INFO - Checkpoint loaded successfully
+2025-10-23 13:44:49,553 - INFO - Inference completed
+2025-10-23 14:16:04,155 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-23 14:16:04,164 - INFO - Created dataset with 72 images
+2025-10-23 14:16:04,164 - INFO - Created dataloader with batch size 1
+2025-10-23 14:16:06,151 - INFO - Successfully loaded model architecture
+2025-10-23 14:16:06,152 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/outputs/refcocog_EB3_checkpoint.pth
+2025-10-23 14:16:17,280 - INFO - Checkpoint loaded successfully
+2025-10-23 14:16:58,620 - INFO - Inference completed
+2025-10-27 19:32:43,694 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-27 19:32:43,703 - INFO - Created dataset with 72 images
+2025-10-27 19:32:43,704 - INFO - Created dataloader with batch size 1
+2025-10-27 19:32:45,913 - INFO - Successfully loaded model architecture
+2025-10-27 19:34:01,718 - INFO - Running in single GPU mode. Skipping distributed setup.
+2025-10-27 19:34:01,727 - INFO - Created dataset with 72 images
+2025-10-27 19:34:01,727 - INFO - Created dataloader with batch size 1
+2025-10-27 19:34:03,272 - INFO - Successfully loaded model architecture
+2025-10-27 19:34:03,273 - INFO - Using provided checkpoint at /home/abood/groundingLMM/GranD/checkpoints/refcocog_EB3_checkpoint.pth
+2025-10-27 19:34:16,521 - INFO - Checkpoint loaded successfully
+2025-10-27 19:34:47,674 - INFO - Inference completed

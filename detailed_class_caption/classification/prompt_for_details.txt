@@ -1,0 +1,2 @@
+For each given class name, generate a detailed botanical description paragraph of approximately 300 words that includes comprehensive information about the species’ taxonomy, morphology, habitat, cultivation, and ecological significance. Format the output in valid JSON using the following structure: {"class_name": "detailed_botanical_description"}. Do not include any URLs, references, or citations in the output text.
+
