@@ -16,10 +16,9 @@ This step covers getting the code, dataset, model checkpoints, and environment f
 1.  **Clone the Code Repository**
     Open your terminal and clone the main project repository from GitHub:
     ```bash
-    git clone https://github.com/your-username/grand-project.git
-    cd grand-project
+    git clone https://github.com/boudiafA/Agri_auto_annotation.git
+    cd Agri_auto_annotation
     ```
-    *(Note: Replace `https://github.com/your-username/grand-project.git` with the actual repository URL.)*
 
 2.  **Download the Model Checkpoints**
     The model weights and checkpoints are required for running the pipeline. Download and unzip them.
