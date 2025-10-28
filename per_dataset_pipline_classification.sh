@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Configuration
-DATASETS_ROOT="/mnt/e/Desktop/AgML/datasets_sorted/classification"
-OUTPUTS_ROOT="/mnt/e/Desktop/AgML/AgriDataset_GranD_annotation/classification"
-CKPT_DIR="/home/abood/groundingLMM/GranD/checkpoints"
+DATASETS_ROOT="/path/to/dataset"
+OUTPUTS_ROOT="/path/to/output_folder"
+CKPT_DIR="/path/to/checkpoints"
 
 # Clean up only your own stale PyTorch shm files
 cleanup_shm() {
