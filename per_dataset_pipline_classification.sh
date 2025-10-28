@@ -168,6 +168,7 @@ process_image_directory() {
     local IMG_DIR="$1"
     local base_output_dir="$2"  # e.g., OUTPUTS_ROOT/dataset_A or OUTPUTS_ROOT/dataset_B/cat
     local dataset_name="$3"
+    local base_dataset_name="$4"
     
     echo "Processing: $IMG_DIR"
     echo "Base output: $base_output_dir"
@@ -188,8 +189,8 @@ process_image_directory() {
         python infer_gemma3.py \
         --image_dir_path "$IMG_DIR" \
         --output_dir_path "$PRED_DIR" \
-        --descriptions_json "../../detailed_class_caption/classification/${dataset_name}.json" \
-        --scan-workers 1 || handle_errors "Gemma3-$dataset_name"
+        --descriptions_json "../../detailed_class_caption/classification/${base_dataset_name}.json" \
+        --scan-workers 8 || handle_errors "Gemma3-$dataset_name"
 
     
     # ============================================================================
@@ -479,7 +480,7 @@ process_image_directory() {
             python generate_captions_from_json.py \
             --image_dir_path "$IMG_DIR" \
             --output_dir_path "$PRED_DIR/level-4-vicuna-13B" \
-            --descriptions_json "../../detailed_class_caption/classification/${dataset_name}.json" \
+            --descriptions_json "../../detailed_class_caption/classification/${base_dataset_name}.json" \
             --job_id '111' || handle_errors "Level-4 Additional Context (local model)-$dataset_name"
 
     fi
@@ -578,7 +579,7 @@ for dataset_dir in "$DATASETS_ROOT"/*; do
         echo "Found images directly in dataset folder: $dataset_name (flat structure)"
         img_dir="$dataset_dir"
         base_output_dir="$OUTPUTS_ROOT/$dataset_name"
-        process_image_directory "$img_dir" "$base_output_dir" "$dataset_name"
+        process_image_directory "$img_dir" "$base_output_dir" "$dataset_name" "$dataset_name"
     else
         echo "Processing classification dataset with class subfolders: $dataset_name"
         
@@ -594,7 +595,7 @@ for dataset_dir in "$DATASETS_ROOT"/*; do
                 base_output_dir="$OUTPUTS_ROOT/$dataset_name/$class_name"
                 full_path_name="$dataset_name/$class_name"
                 
-                process_image_directory "$img_dir" "$base_output_dir" "$full_path_name"
+                process_image_directory "$img_dir" "$base_output_dir" "$full_path_name" "$dataset_name"
                 ((class_count++))
             else
                 echo "  → Warning: No images found in class folder: $class_name"
